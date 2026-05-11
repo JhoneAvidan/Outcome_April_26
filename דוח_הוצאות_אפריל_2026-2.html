@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דוח הוצאות אפריל 2026 — מתחם CLE קיסריה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2942;
+    --navy-deep: #0f1a2e;
+    --navy-light: #2c3e5c;
+    --gold: #c9a96e;
+    --gold-deep: #a88a4f;
+    --gold-light: #e0c896;
+    --clay: #b86b4b;
+    --clay-light: #d4906f;
+    --cream: #faf7f1;
+    --cream-dark: #f0ebe0;
+    --paper: #fdfbf5;
+    --ink: #1c1c1c;
+    --muted: #6b6b6b;
+    --line: #d9d3c4;
+    --soft: #ffffff;
+    --shadow-sm: 0 1px 2px rgba(26, 41, 66, 0.04);
+    --shadow: 0 2px 4px rgba(26, 41, 66, 0.05), 0 12px 32px rgba(26, 41, 66, 0.06);
+    --shadow-lg: 0 4px 8px rgba(26, 41, 66, 0.06), 0 24px 56px rgba(26, 41, 66, 0.10);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Assistant', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    font-weight: 400;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(201, 169, 110, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 100%, rgba(26, 41, 66, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(184, 107, 75, 0.03) 0%, transparent 60%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream);
+    border-radius: 6px;
+    padding: 64px 56px 52px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 56px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.18) 0%, transparent 60%);
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -120px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(184, 107, 75, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+  }
+
+  .hero-decoration {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 2; }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.1s forwards;
+  }
+
+  .hero-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, var(--gold), transparent);
+    max-width: 140px;
+  }
+
+  .hero h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(36px, 5.5vw, 58px);
+    font-weight: 700;
+    line-height: 1.12;
+    margin-bottom: 14px;
+    letter-spacing: -0.8px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.25s forwards;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(250, 247, 241, 0.78);
+    margin-bottom: 44px;
+    font-weight: 300;
+    max-width: 560px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .total-card {
+    background: rgba(250, 247, 241, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: 6px;
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.55s forwards;
+  }
+
+  .total-card::before, .total-card::after {
+    content: '';
+    position: absolute;
+    width: 60px; height: 60px;
+    opacity: 0.6;
+  }
+  .total-card::before {
+    top: 0; right: 0;
+    border-top: 1px solid var(--gold);
+    border-right: 1px solid var(--gold);
+  }
+  .total-card::after {
+    bottom: 0; left: 0;
+    border-bottom: 1px solid var(--gold);
+    border-left: 1px solid var(--gold);
+  }
+
+  .total-card-label {
+    font-size: 15px;
+    color: rgba(250, 247, 241, 0.7);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .total-card-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(40px, 6vw, 56px);
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: -1.5px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .total-card-amount .currency {
+    font-size: 0.55em;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  .pulse-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.6); }
+    50% { opacity: 0.6; transform: scale(0.95); box-shadow: 0 0 0 8px rgba(201, 169, 110, 0); }
+  }
+
+  /* ============ INSIGHT CARDS ============ */
+  .insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .insight-card {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .insight-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--gold);
+  }
+
+  .insight-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 4px; height: 100%;
+    background: var(--gold);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+
+  .insight-card:hover::after { transform: scaleY(1); }
+
+  .insight-icon {
+    width: 36px; height: 36px;
+    background: var(--cream);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--gold-deep);
+  }
+
+  .insight-value {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .insight-label {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ============ VISUAL BREAKDOWN ============ */
+  .breakdown {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 48px;
+    margin-bottom: 64px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .breakdown.visible { opacity: 1; transform: translateY(0); }
+
+  .breakdown::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(to left, var(--navy), var(--gold), var(--clay));
+  }
+
+  .breakdown-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .donut-wrap {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .donut-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .donut-track {
+    fill: none;
+    stroke: var(--cream-dark);
+    stroke-width: 22;
+  }
+
+  .donut-segment {
+    fill: none;
+    stroke-width: 22;
+    stroke-linecap: butt;
+    transition: stroke-width 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    stroke-dasharray: 0 1000;
+  }
+
+  .donut-segment.animate-in {
+    animation: drawSegment 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes drawSegment {
+    to { stroke-dasharray: var(--len) 1000; }
+  }
+
+  .donut-segment.fixed { stroke: var(--navy); }
+  .donut-segment.variable { stroke: var(--gold); }
+  .donut-segment.march { stroke: var(--clay); }
+
+  .donut-wrap:hover .donut-segment { opacity: 0.35; }
+  .donut-wrap .donut-segment:hover { opacity: 1; stroke-width: 28; }
+
+  .donut-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .donut-center-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .donut-center-value {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+  }
+
+  .donut-center-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .breakdown-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .legend-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .legend-item {
+    display: grid;
+    grid-template-columns: 14px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--cream);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .legend-item:hover {
+    background: var(--paper);
+    border-color: var(--line);
+    transform: translateX(-4px);
+  }
+
+  .legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .legend-dot.fixed { background: var(--navy); }
+  .legend-dot.variable { background: var(--gold); }
+  .legend-dot.march { background: var(--clay); }
+
+  .legend-content { display: flex; flex-direction: column; gap: 2px; }
+
+  .legend-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .legend-percent {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .legend-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .legend-amount .currency {
+    font-size: 0.7em;
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-right: 3px;
+  }
+
+  /* ============ TOP EXPENSES BAR CHART ============ */
+  .top-expenses {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 40px 44px 44px;
+    margin-bottom: 64px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .top-expenses.visible { opacity: 1; transform: translateY(0); }
+
+  .top-expenses-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .top-expenses-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+  }
+
+  .top-expenses-sub {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .bar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .bar-item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 18px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .bar-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bar-rank {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 16px;
+    color: var(--gold-deep);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .bar-row { display: flex; flex-direction: column; gap: 8px; }
+
+  .bar-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .bar-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .bar-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .bar-amount .currency {
+    color: var(--gold-deep);
+    font-size: 0.7em;
+    font-weight: 400;
+    margin-right: 2px;
+  }
+
+  .bar-track {
+    height: 8px;
+    background: var(--cream-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bar-item.visible .bar-fill { width: var(--w); }
+
+  .bar-fill.fixed { background: linear-gradient(to left, var(--navy), var(--navy-light)); }
+  .bar-fill.variable { background: linear-gradient(to left, var(--gold-deep), var(--gold)); }
+  .bar-fill.march { background: linear-gradient(to left, var(--clay), var(--clay-light)); }
+
+  /* ============ SECTIONS ============ */
+  section.detail-section {
+    margin-bottom: 64px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  section.detail-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+
+  .section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .section-number {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 56px;
+    color: var(--cream-dark);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .section-info { flex: 1; }
+
+  .section-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 30px;
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+  }
+
+  .section-meta {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .section-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 26px;
+    color: var(--navy);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .section-amount .currency {
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-right: 4px;
+    font-size: 0.75em;
+  }
+
+  .section-intro {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.75;
+    max-width: 720px;
+  }
+
+  /* ============ EXPENSE TABLE ============ */
+  .expense-list {
+    background: var(--soft);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+  }
+
+  .expense-row {
+    display: grid;
+    grid-template-columns: 50px 1fr auto auto;
+    align-items: center;
+    padding: 18px 26px;
+    border-bottom: 1px solid var(--cream-dark);
+    transition: background 0.25s ease;
+    gap: 18px;
+    position: relative;
+  }
+
+  .expense-row:last-of-type { border-bottom: none; }
+
+  .expense-row:not(.total-row):hover {
+    background: var(--cream);
+  }
+
+  .expense-row:not(.total-row)::before {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+  }
+
+  .expense-row:not(.total-row):hover::before { transform: scaleY(1); }
+
+  .expense-num {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 14px;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  .expense-name {
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .expense-note {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 3px;
+    letter-spacing: 0.2px;
+  }
+
+  .expense-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--cream-dark);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .expense-bar-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    width: 0;
+    transition: width 0.9s ease;
+  }
+
+  .expense-row.visible .expense-bar-fill { width: var(--w); }
+
+  .expense-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 18px;
+    color: var(--navy);
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 100px;
+    text-align: left;
+  }
+
+  .expense-amount .currency {
+    font-size: 0.7em;
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-right: 3px;
+  }
+
+  .expense-row.total-row {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream);
+    padding: 24px 26px;
+    grid-template-columns: 50px 1fr auto;
+  }
+
+  .expense-row.total-row .expense-name {
+    color: var(--cream);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+  }
+
+  .expense-row.total-row .expense-amount {
+    color: var(--gold);
+    font-size: 24px;
+  }
+
+  .expense-row.total-row .expense-amount .currency { color: var(--gold); }
+
+  /* ============ INFO BOX ============ */
+  .info-box {
+    background: linear-gradient(135deg, rgba(184, 107, 75, 0.08), rgba(184, 107, 75, 0.02));
+    border-right: 3px solid var(--clay);
+    padding: 22px 26px;
+    margin: 28px 0;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .info-icon {
+    width: 28px; height: 28px;
+    background: var(--clay);
+    color: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .info-box-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 17px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .info-box-text {
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  /* ============ FINAL SUMMARY ============ */
+  .final-summary {
+    background: linear-gradient(135deg, var(--paper) 0%, var(--cream) 100%);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 48px;
+    margin-top: 64px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .final-summary.visible { opacity: 1; transform: translateY(0); }
+
+  .final-summary::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    height: 4px;
+    background: linear-gradient(to left, var(--clay), var(--gold), var(--navy));
+  }
+
+  .final-summary::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-summary-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 28px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    position: relative;
+  }
+
+  .final-summary-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 12px auto 0;
+  }
+
+  .final-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .final-row {
+    display: grid;
+    grid-template-columns: 14px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .final-row-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+
+  .final-row-dot.fixed { background: var(--navy); }
+  .final-row-dot.variable { background: var(--gold); }
+  .final-row-dot.march { background: var(--clay); }
+
+  .final-row-label {
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .final-row-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .final-row-amount .currency {
+    font-size: 0.7em;
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-right: 4px;
+  }
+
+  .final-total {
+    margin-top: 24px;
+    padding: 24px 0 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 2px solid var(--navy);
+  }
+
+  .final-total-label {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .final-total-amount {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -1px;
+  }
+
+  .final-total-amount .currency {
+    font-size: 0.6em;
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-right: 8px;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    margin-top: 72px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  footer strong {
+    color: var(--navy);
+    font-weight: 700;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .container { padding: 24px 16px 60px; }
+    .hero { padding: 44px 28px 36px; }
+    .total-card { padding: 22px; flex-direction: column; align-items: flex-start; }
+    .breakdown { padding: 28px 20px; }
+    .breakdown-grid { grid-template-columns: 1fr; gap: 36px; }
+    .top-expenses { padding: 28px 20px; }
+    .section-header { flex-wrap: wrap; gap: 12px; }
+    .section-number { font-size: 40px; }
+    .section-title { font-size: 24px; }
+    .section-amount { margin-right: auto; font-size: 22px; }
+    .expense-row { grid-template-columns: 28px 1fr auto; padding: 16px; gap: 12px; }
+    .expense-bar { display: none; }
+    .expense-name { font-size: 15px; }
+    .expense-amount { font-size: 16px; min-width: 80px; }
+    .final-summary { padding: 28px 22px; }
+    .final-total-amount { font-size: 32px; }
+    .final-total-label { font-size: 20px; }
+  }
+
+  @media print {
+    body { background: white; }
+    body::before { display: none; }
+    .hero { background: white; color: var(--navy); border: 2px solid var(--navy); box-shadow: none; }
+    .hero h1, .hero-sub, .total-card-label { color: var(--navy); }
+    .hero-eyebrow { color: var(--gold-deep); }
+    .total-card-amount { color: var(--navy); }
+    .total-card { border-color: var(--gold-deep); }
+    .expense-row.total-row { background: var(--cream-dark); color: var(--ink); }
+    .expense-row.total-row .expense-name, .expense-row.total-row .expense-amount { color: var(--navy); }
+    section.detail-section, .insight-card, .bar-item, .breakdown, .top-expenses, .final-summary { opacity: 1 !important; transform: none !important; }
+    .bar-fill, .expense-bar-fill { width: var(--w) !important; }
+    .donut-segment { stroke-dasharray: var(--len) 1000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <svg class="hero-decoration" width="120" height="120" viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="58" stroke="currentColor" stroke-width="0.5"/>
+      <circle cx="60" cy="60" r="40" stroke="currentColor" stroke-width="0.5"/>
+      <circle cx="60" cy="60" r="22" stroke="currentColor" stroke-width="0.5"/>
+      <line x1="60" y1="2" x2="60" y2="118" stroke="currentColor" stroke-width="0.5"/>
+      <line x1="2" y1="60" x2="118" y2="60" stroke="currentColor" stroke-width="0.5"/>
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">דוח חודשי · אפריל 2026</div>
+      <h1>דוח הוצאות<br>מתחם CLE קיסריה</h1>
+      <p class="hero-sub">סיכום מלא ושקוף של כל ההוצאות ששולמו בחודש אפריל, בפירוט מפורט לדיירי המתחם.</p>
+
+      <div class="total-card">
+        <span class="total-card-label"><span class="pulse-dot"></span>סך הכול שולם בחודש אפריל</span>
+        <span class="total-card-amount"><span class="currency">₪</span><span data-counter="87802">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INSIGHT CARDS ============ -->
+  <div class="insights">
+    <div class="insight-card" data-observe>
+      <div class="insight-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+      </div>
+      <div class="insight-value"><span data-counter="87802">0</span> ₪</div>
+      <div class="insight-label">סך כל ההוצאות החודש</div>
+    </div>
+    <div class="insight-card" data-observe>
+      <div class="insight-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="insight-value">30</div>
+      <div class="insight-label">סעיפי הוצאה נפרדים</div>
+    </div>
+    <div class="insight-card" data-observe>
+      <div class="insight-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="insight-value">17,000 ₪</div>
+      <div class="insight-label">ההוצאה הגדולה ביותר — ניקיון</div>
+    </div>
+    <div class="insight-card" data-observe>
+      <div class="insight-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+      </div>
+      <div class="insight-value">65%</div>
+      <div class="insight-label">חלקן של ההוצאות הקבועות</div>
+    </div>
+  </div>
+
+  <!-- ============ VISUAL BREAKDOWN ============ -->
+  <div class="breakdown" data-observe>
+    <div class="breakdown-grid">
+      <div class="donut-wrap">
+        <svg class="donut-svg" viewBox="0 0 180 180">
+          <circle class="donut-track" cx="90" cy="90" r="70"/>
+          <circle class="donut-segment fixed" cx="90" cy="90" r="70" style="--len: 283.86;"/>
+          <circle class="donut-segment variable" cx="90" cy="90" r="70" style="--len: 65.66; transform: rotate(232.36deg); transform-origin: center;"/>
+          <circle class="donut-segment march" cx="90" cy="90" r="70" style="--len: 90.20; transform: rotate(286.11deg); transform-origin: center;"/>
+        </svg>
+        <div class="donut-center">
+          <div class="donut-center-label">סך הכול</div>
+          <div class="donut-center-value">₪87,802</div>
+          <div class="donut-center-sub">אפריל 2026</div>
+        </div>
+      </div>
+
+      <div class="breakdown-legend">
+        <h3 class="legend-title">התפלגות ההוצאות</h3>
+        <div class="legend-item" data-legend="0">
+          <span class="legend-dot fixed"></span>
+          <div class="legend-content">
+            <span class="legend-name">הוצאות חודשיות קבועות</span>
+            <span class="legend-percent">64.5% מסך כל ההוצאות</span>
+          </div>
+          <span class="legend-amount"><span class="currency">₪</span>56,667</span>
+        </div>
+        <div class="legend-item" data-legend="1">
+          <span class="legend-dot variable"></span>
+          <div class="legend-content">
+            <span class="legend-name">הוצאות משתנות</span>
+            <span class="legend-percent">14.9% מסך כל ההוצאות</span>
+          </div>
+          <span class="legend-amount"><span class="currency">₪</span>13,108</span>
+        </div>
+        <div class="legend-item" data-legend="2">
+          <span class="legend-dot march"></span>
+          <div class="legend-content">
+            <span class="legend-name">השלמת חודש מרץ</span>
+            <span class="legend-percent">20.5% מסך כל ההוצאות</span>
+          </div>
+          <span class="legend-amount"><span class="currency">₪</span>18,027</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TOP EXPENSES BAR CHART ============ -->
+  <div class="top-expenses" data-observe>
+    <div class="top-expenses-header">
+      <h3 class="top-expenses-title">סעיפי ההוצאה הגדולים ביותר</h3>
+      <span class="top-expenses-sub">Top 8</span>
+    </div>
+
+    <div class="bar-list">
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">01</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">ניקיון חודשי</span>
+            <span class="bar-amount"><span class="currency">₪</span>17,000</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 100%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">02</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">מנהל אחזקה</span>
+            <span class="bar-amount"><span class="currency">₪</span>11,000</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 64.7%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">03</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">שירות מעליות אלקטרה</span>
+            <span class="bar-amount"><span class="currency">₪</span>9,300</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 54.7%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">04</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">שירות מעליות מורחב <small style="color:var(--muted);font-weight:400">· מרץ</small></span>
+            <span class="bar-amount"><span class="currency">₪</span>9,300</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill march" style="--w: 54.7%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">05</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">דמי ניהול</span>
+            <span class="bar-amount"><span class="currency">₪</span>6,300</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 37.1%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">06</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">תשלום חשמל</span>
+            <span class="bar-amount"><span class="currency">₪</span>5,608</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 33%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">07</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">פרקט בחדר חשמל</span>
+            <span class="bar-amount"><span class="currency">₪</span>4,207</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill variable" style="--w: 24.7%"></div></div>
+        </div>
+      </div>
+      <div class="bar-item" data-observe-bar>
+        <span class="bar-rank">08</span>
+        <div class="bar-row">
+          <div class="bar-meta">
+            <span class="bar-name">ביטוח מבנה</span>
+            <span class="bar-amount"><span class="currency">₪</span>3,662</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill fixed" style="--w: 21.5%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 1: FIXED EXPENSES ============ -->
+  <section class="detail-section" data-observe>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <div class="section-info">
+        <h2 class="section-title">הוצאות חודשיות קבועות</h2>
+        <span class="section-meta">10 סעיפים · משולמים מדי חודש</span>
+      </div>
+      <span class="section-amount"><span class="currency">₪</span>56,667</span>
+    </div>
+    <p class="section-intro">
+      הוצאות שמשלמים בכל חודש באופן קבוע — שירותים שמחזיקים את המתחם פועל ביום־יום: ניקיון, אחזקה, מעליות, חשמל, ביטוח וכדומה.
+    </p>
+
+    <div class="expense-list">
+      <div class="expense-row" data-observe-row><span class="expense-num">01</span><span class="expense-name">ניקיון חודשי</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 100%"></div></div><span class="expense-amount"><span class="currency">₪</span>17,000</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">02</span><span class="expense-name">מנהל אחזקה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 64.7%"></div></div><span class="expense-amount"><span class="currency">₪</span>11,000</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">03</span><span class="expense-name">שירות מעליות אלקטרה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 54.7%"></div></div><span class="expense-amount"><span class="currency">₪</span>9,300</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">04</span><span class="expense-name">דמי ניהול</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 37.1%"></div></div><span class="expense-amount"><span class="currency">₪</span>6,300</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">05</span><span class="expense-name">תשלום חשמל</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 33%"></div></div><span class="expense-amount"><span class="currency">₪</span>5,608</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">06</span><span class="expense-name">ביטוח מבנה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 21.5%"></div></div><span class="expense-amount"><span class="currency">₪</span>3,662</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">07</span><span class="expense-name">מכונת שטיפה רכובה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 11.8%"></div></div><span class="expense-amount"><span class="currency">₪</span>2,000</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">08</span><span class="expense-name">גינון חודשי</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 8.8%"></div></div><span class="expense-amount"><span class="currency">₪</span>1,500</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">09</span><span class="expense-name">קווי טלפון</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 1.4%"></div></div><span class="expense-amount"><span class="currency">₪</span>239</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">10</span><span class="expense-name">שעות נוכחות</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 0.3%"></div></div><span class="expense-amount"><span class="currency">₪</span>58</span></div>
+      <div class="expense-row total-row"><span class="expense-num"></span><span class="expense-name">סך הכול הוצאות קבועות</span><span class="expense-amount"><span class="currency">₪</span>56,667</span></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: VARIABLE EXPENSES ============ -->
+  <section class="detail-section" data-observe>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <div class="section-info">
+        <h2 class="section-title">הוצאות משתנות</h2>
+        <span class="section-meta">13 סעיפים · חד־פעמיים החודש</span>
+      </div>
+      <span class="section-amount"><span class="currency">₪</span>13,108</span>
+    </div>
+    <p class="section-intro">
+      הוצאות חד־פעמיות שנדרשו החודש: בדיקות תקופתיות, תיקונים, רכישות ושיפורים נקודתיים במתחם.
+    </p>
+
+    <div class="expense-list">
+      <div class="expense-row" data-observe-row><span class="expense-num">01</span><span class="expense-name">פרקט בחדר חשמל</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 100%"></div></div><span class="expense-amount"><span class="currency">₪</span>4,207</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">02</span><span class="expense-name">בדיקת מעליות</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 56.1%"></div></div><span class="expense-amount"><span class="currency">₪</span>2,360</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">03</span><span class="expense-name">ניקוי וחיטוי מאגרי מים<span class="expense-note">עבור חודש ינואר</span></span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 56.1%"></div></div><span class="expense-amount"><span class="currency">₪</span>2,360</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">04</span><span class="expense-name">בדיקת 3 מז"חים<span class="expense-note">עבור חודש ינואר</span></span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 21%"></div></div><span class="expense-amount"><span class="currency">₪</span>885</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">05</span><span class="expense-name">עגלת משא</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 18.2%"></div></div><span class="expense-amount"><span class="currency">₪</span>764</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">06</span><span class="expense-name">מתנות חג לעובדים</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 14.3%"></div></div><span class="expense-amount"><span class="currency">₪</span>600</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">07</span><span class="expense-name">פתיחת ביוב</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 14%"></div></div><span class="expense-amount"><span class="currency">₪</span>590</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">08</span><span class="expense-name">10 שלטי חניה לאורחים</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 14%"></div></div><span class="expense-amount"><span class="currency">₪</span>590</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">09</span><span class="expense-name">אינטרקום — 5 משתמשים חדשים</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 7%"></div></div><span class="expense-amount"><span class="currency">₪</span>295</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">10</span><span class="expense-name">שלט PVC 60/80</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 4.3%"></div></div><span class="expense-amount"><span class="currency">₪</span>181</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">11</span><span class="expense-name">כיבוד לאספת דיירים</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 3.8%"></div></div><span class="expense-amount"><span class="currency">₪</span>162</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">12</span><span class="expense-name">כיבוד לאספת דיירים</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 1.4%"></div></div><span class="expense-amount"><span class="currency">₪</span>58</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">13</span><span class="expense-name">מנעול, כפפות וחומצת מלח</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 1.3%"></div></div><span class="expense-amount"><span class="currency">₪</span>56</span></div>
+      <div class="expense-row total-row"><span class="expense-num"></span><span class="expense-name">סך הכול הוצאות משתנות</span><span class="expense-amount"><span class="currency">₪</span>13,108</span></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: MARCH EXPENSES ============ -->
+  <section class="detail-section" data-observe>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <div class="section-info">
+        <h2 class="section-title">הוצאות חודש מרץ ששולמו באפריל</h2>
+        <span class="section-meta">7 סעיפים · השלמה מהחודש הקודם</span>
+      </div>
+      <span class="section-amount"><span class="currency">₪</span>18,027</span>
+    </div>
+
+    <div class="info-box">
+      <span class="info-icon">i</span>
+      <div>
+        <div class="info-box-title">מה זה אומר?</div>
+        <div class="info-box-text">
+          חלק מהחשבוניות של חודש מרץ הגיעו והוסדרו בפועל רק בחודש אפריל, ולכן הסכום נכלל בדוח הנוכחי. מדובר בהוצאות שכבר היו ידועות — רק התשלום בוצע במועד מאוחר יותר.
+        </div>
+      </div>
+    </div>
+
+    <div class="expense-list">
+      <div class="expense-row" data-observe-row><span class="expense-num">01</span><span class="expense-name">שירות מעליות מורחב</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 100%"></div></div><span class="expense-amount"><span class="currency">₪</span>9,300</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">02</span><span class="expense-name">ביטוח מבנה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 39.4%"></div></div><span class="expense-amount"><span class="currency">₪</span>3,662</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">03</span><span class="expense-name">מכונת שטיפה רכובה</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 21.5%"></div></div><span class="expense-amount"><span class="currency">₪</span>2,000</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">04</span><span class="expense-name">גינון חודשי</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 16.1%"></div></div><span class="expense-amount"><span class="currency">₪</span>1,500</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">05</span><span class="expense-name">שמן למפיצי ריח</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 13.6%"></div></div><span class="expense-amount"><span class="currency">₪</span>1,268</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">06</span><span class="expense-name">קווי טלפון</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 2.6%"></div></div><span class="expense-amount"><span class="currency">₪</span>239</span></div>
+      <div class="expense-row" data-observe-row><span class="expense-num">07</span><span class="expense-name">שעון נוכחות</span><div class="expense-bar"><div class="expense-bar-fill" style="--w: 0.6%"></div></div><span class="expense-amount"><span class="currency">₪</span>58</span></div>
+      <div class="expense-row total-row"><span class="expense-num"></span><span class="expense-name">סך הכול הוצאות מרץ ששולמו באפריל</span><span class="expense-amount"><span class="currency">₪</span>18,027</span></div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL SUMMARY ============ -->
+  <div class="final-summary" data-observe>
+    <h3 class="final-summary-title">ריכוז התשלומים · חודש אפריל</h3>
+
+    <div class="final-rows">
+      <div class="final-row">
+        <span class="final-row-dot fixed"></span>
+        <span class="final-row-label">הוצאות חודשיות קבועות</span>
+        <span class="final-row-amount"><span class="currency">₪</span>56,667</span>
+      </div>
+      <div class="final-row">
+        <span class="final-row-dot variable"></span>
+        <span class="final-row-label">הוצאות משתנות</span>
+        <span class="final-row-amount"><span class="currency">₪</span>13,108</span>
+      </div>
+      <div class="final-row">
+        <span class="final-row-dot march"></span>
+        <span class="final-row-label">הוצאות חודש מרץ (שולמו באפריל)</span>
+        <span class="final-row-amount"><span class="currency">₪</span>18,027</span>
+      </div>
+
+      <div class="final-total">
+        <span class="final-total-label">סך הכול שולם</span>
+        <span class="final-total-amount"><span class="currency">₪</span><span data-counter="87802">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>ועד מתחם CLE קיסריה</strong>
+    הדוח מציג את כל ההוצאות ששולמו בפועל בחודש אפריל 2026.
+    <div class="footer-divider"></div>
+    לכל שאלה, הבהרה או בקשה — נשמח לעמוד לשירותכם.
+  </footer>
+
+</div>
+
+<script>
+  // ========== COUNTER ANIMATION ==========
+  function animateCounter(el, target, duration = 1800) {
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(target * eased);
+      el.textContent = current.toLocaleString('en-US');
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString('en-US');
+    }
+    requestAnimationFrame(tick);
+  }
+
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    const target = parseInt(el.dataset.counter, 10);
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !el.dataset.animated) {
+          el.dataset.animated = '1';
+          animateCounter(el, target);
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(el);
+  });
+
+  // ========== SCROLL-TRIGGERED REVEAL ==========
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('[data-observe]').forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.insight-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 80) + 'ms';
+  });
+
+  // ========== DONUT CHART ANIMATION ==========
+  const donutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const segments = entry.target.querySelectorAll('.donut-segment');
+        segments.forEach((seg, i) => {
+          setTimeout(() => seg.classList.add('animate-in'), i * 220);
+        });
+        donutObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const donut = document.querySelector('.donut-wrap');
+  if (donut) donutObserver.observe(donut);
+
+  // ========== BAR ITEMS STAGGERED REVEAL ==========
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = entry.target.querySelectorAll('[data-observe-bar]');
+        bars.forEach((bar, i) => {
+          setTimeout(() => bar.classList.add('visible'), i * 90);
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const topExpenses = document.querySelector('.top-expenses');
+  if (topExpenses) barObserver.observe(topExpenses);
+
+  // ========== EXPENSE ROWS STAGGERED REVEAL ==========
+  const rowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const rows = entry.target.querySelectorAll('[data-observe-row]');
+        rows.forEach((row, i) => {
+          setTimeout(() => row.classList.add('visible'), i * 50);
+        });
+        rowObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.detail-section').forEach(s => rowObserver.observe(s));
+
+  // ========== DONUT ↔ LEGEND HOVER SYNC ==========
+  const segments = document.querySelectorAll('.donut-segment');
+  const legendItems = document.querySelectorAll('.legend-item');
+
+  segments.forEach((seg, i) => {
+    seg.addEventListener('mouseenter', () => {
+      if (legendItems[i]) {
+        legendItems[i].style.background = 'var(--paper)';
+        legendItems[i].style.borderColor = 'var(--gold)';
+        legendItems[i].style.transform = 'translateX(-4px)';
+      }
+    });
+    seg.addEventListener('mouseleave', () => {
+      if (legendItems[i]) {
+        legendItems[i].style.background = '';
+        legendItems[i].style.borderColor = '';
+        legendItems[i].style.transform = '';
+      }
+    });
+  });
+
+  legendItems.forEach((item, i) => {
+    item.addEventListener('mouseenter', () => {
+      segments.forEach((s, j) => {
+        if (j !== i) s.style.opacity = '0.35';
+        else s.style.strokeWidth = '28';
+      });
+    });
+    item.addEventListener('mouseleave', () => {
+      segments.forEach(s => {
+        s.style.opacity = '';
+        s.style.strokeWidth = '';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
